@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Tutorial.create(title: "Example Title 1", language: "1", description: "Example description 1.", content: "<p style=\"color: #F00\">Example content 1.</p>")
