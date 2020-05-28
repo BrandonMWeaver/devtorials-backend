@@ -4,8 +4,7 @@ class CreateTutorials < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :language
       t.string :description
-      t.text :content
-
+      
       t.timestamps
     end
   end

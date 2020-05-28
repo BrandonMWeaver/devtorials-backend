@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_24_223656) do
+ActiveRecord::Schema.define(version: 2020_05_28_002144) do
+
+  create_table "lessons", force: :cascade do |t|
+    t.integer "tutorial_id"
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "tutorials", force: :cascade do |t|
     t.string "title"
     t.string "language"
     t.string "description"
-    t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

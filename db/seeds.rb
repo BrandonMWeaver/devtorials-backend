@@ -6,4 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Tutorial.create(title: "Example Title 1", language: "1", description: "Example description 1.", content: "<p style=\"color: #F00\">Example content 1.</p>")
+tutorial = Tutorial.create(
+	title: "Introduction to C#",
+	language: "C#",
+	description: "An in-depth introduction to C# and the .NET framework.",
+)
+
+lesson1 = Lesson.create(
+	content: File.read("./storage/tutorials/tutorial_00001.html")
+)
