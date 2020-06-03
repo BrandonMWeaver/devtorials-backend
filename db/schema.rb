@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_28_002144) do
+ActiveRecord::Schema.define(version: 2020_06_02_232105) do
+
+  create_table "administrators", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "lessons", force: :cascade do |t|
     t.integer "tutorial_id"
@@ -20,6 +27,7 @@ ActiveRecord::Schema.define(version: 2020_05_28_002144) do
   end
 
   create_table "tutorials", force: :cascade do |t|
+    t.integer "administrator_id"
     t.string "title"
     t.string "language"
     t.string "description"

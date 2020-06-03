@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+admin = Administrator.create(username: "example user", password: "12345")
+
 tutorial = Tutorial.create(
 	title: "Introduction to C#",
 	language: "C#",
@@ -15,3 +17,7 @@ tutorial = Tutorial.create(
 lesson1 = Lesson.create(
 	content: File.read("./storage/tutorials/tutorial_00001.html")
 )
+
+tutorial.lessons << lesson1
+
+admin.tutorials << tutorial
